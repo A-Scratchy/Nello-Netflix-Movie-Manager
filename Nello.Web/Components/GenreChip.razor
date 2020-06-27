@@ -1,0 +1,43 @@
+﻿@using Syncfusion.Blazor.Buttons
+
+@switch (@Genre)
+{
+    case "Comedy":
+        <ChipListChip Text="@Genre" CssClass="e-danger" Enabled="true"></ChipListChip>
+        break;
+    case "Action":
+        <ChipListChip Text="@Genre" CssClass="e-info" Enabled="true"></ChipListChip>
+        break;
+    case "Crime":
+        <ChipListChip Text="@Genre" CssClass="e-success" Enabled="true"></ChipListChip>
+        break;
+    case "Drama":
+        <ChipListChip Text="@Genre" CssClass="e-warning" Enabled="true"></ChipListChip>
+        break;
+    case "Biography":
+        <ChipListChip Text="@Genre" CssClass="e-primary" Enabled="true"></ChipListChip>
+        break;
+    case "Adventure":
+        <ChipListChip Text="@Genre" CssClass="e-danger" Enabled="true"></ChipListChip>
+        break;
+    case "Family":
+        <ChipListChip Text="@Genre" CssClass="e-info" Enabled="true"></ChipListChip>
+        break;
+    case "Sci-Fi":
+        <ChipListChip Text="@Genre" CssClass="e-success" Enabled="true"></ChipListChip>
+        break;
+    case "Thriller":
+        <ChipListChip Text="@Genre" CssClass="e-warning" Enabled="true"></ChipListChip>
+        break;
+    case "Documentary":
+        <ChipListChip Text="@Genre" CssClass="e-primary" Enabled="true"></ChipListChip>
+        break;
+    default:
+        <ChipListChip Text="@Genre" CssClass="e-info" Enabled="true"></ChipListChip>
+        break;
+}
+
+@code {
+    [Parameter]
+    public string Genre { get; set; }
+}
