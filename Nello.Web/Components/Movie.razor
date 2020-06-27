@@ -1,0 +1,71 @@
+@using Microsoft.AspNetCore.Components.Web
+@inherits MovieBase
+
+@inject IHttpClientFactory _ClientFactory
+
+<div id="@Movie.ToString()" class="movieDiv">
+
+    <div @onclick="SetSelectedMovie">
+        <img class="movie_img" src="@Movie.MovieData.Img" alt="@Movie.MovieData.Title" />
+    </div>
+
+    <div class="statusBar">
+
+        <button class="btn btn-outline-dark seen" @onclick="ToggleSeen">
+            @if (Movie.UserMoviedata != null && Movie.UserMoviedata.Seen)
+            {
+                <i class="far fa-eye text-success"></i>
+            }
+            else
+            { <i class="far fa-eye-slash"></i>}
+        </button>
+
+        <button class="btn btn-outline-dark categoryButton">
+            @if (MovieInAnyCatalog())
+            {
+                <i class="fas fa-folder text-primary"></i>
+            }
+            else
+            {
+                <i class="far fa-folder"></i>
+            }
+            <div class="categoryDropdown">
+                @if (UsersCatalogs != null)
+                {
+                    @foreach (var catalog in UsersCatalogs)
+                    {
+
+                        if (MovieIsInCatalog(catalog))
+                        {
+                            <div class="option text-success" @onclick="() => ToggleInCatalog(catalog.ToString())">
+                                <div class="col-2 ">
+                                    <i class="fas fa-folder" />
+                                </div>
+                                <div class="col-10">
+                                    @catalog.Name
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="option text-secondary" @onclick="() => ToggleInCatalog(catalog.ToString())">
+                                <div class="col-2 ">
+                                    <i class="far fa-folder" />
+                                </div>
+                                <div class="col-10">
+                                    @catalog.Name
+                                </div>
+                            </div>
+                        }
+
+                    }
+                }
+            </div>
+        </button>
+
+        <button class="btn btn-outline-dark">
+            <i class="far fa-smile"></i>
+        </button>
+
+    </div>
+</div>

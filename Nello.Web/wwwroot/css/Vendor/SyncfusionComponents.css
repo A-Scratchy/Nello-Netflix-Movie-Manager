@@ -1,0 +1,180 @@
+﻿/* Sidebar */
+
+/* custom code end */
+/* end of content area styles */
+/* Sidebar styles */
+.dockSidebar.e-sidebar.e-right.e-close {
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+.dockSidebar .e-icons::before {
+    font-size: 2em;
+}
+/* dockbar icon Style */
+.dockSidebar .home::before {
+    content: '\e102';
+}
+
+.dockSidebar .profile::before {
+    content: '\e10c';
+}
+
+.dockSidebar .info::before {
+    content: '\e11b';
+}
+
+.dockSidebar .settings::before {
+    content: '\e10b';
+}
+
+.e-sidebar .expand::before,
+.e-sidebar.e-right.e-open .expand::before {
+    content: '\e10f';
+}
+
+.e-sidebar.e-open .expand::before,
+.e-sidebar.e-right .expand::before {
+    content: '\e10e';
+}
+/* end of dockbar icon Style */
+
+.dockSidebar.e-close .sidebar-item {
+    padding: 1% 1%;
+}
+
+.dockSidebar.e-dock.e-close span.e-text {
+    display: none;
+}
+
+.dockSidebar.e-dock.e-open span.e-text {
+    display: inline-block;
+}
+
+.dockSidebar li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.dockSidebar ul {
+    padding: 0px;
+}
+
+.dockSidebar.e-sidebar ul li:hover span {
+    color: white
+}
+
+.dockSidebar span.e-icons {
+    color: #c0c2c5;
+    line-height: 2
+}
+
+.e-open .e-icons {
+    margin-right: 16px;
+}
+
+.e-open .e-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 23px;
+    font-size: 15px;
+}
+
+.sidebar-item {
+    text-align: center;
+    border-bottom: 1px #e5e5e58a solid;
+}
+
+.e-sidebar.e-open .sidebar-item {
+    text-align: left;
+    padding-left: 15px;
+    color: #c0c2c5;
+}
+
+.dockSidebar.e-sidebar {
+    background: #2d323e;
+    overflow: hidden;
+}
+
+/* end of custom generated icons styles */
+/* custom code start */
+.ej2-new .sb-header,
+.ej2-new .sb-bread-crumb,
+.ej2-new #action-description,
+.ej2-new .sb-action-description,
+.ej2-new .e-tab-header,
+.ej2-new .description-section,
+.ej2-new #description-section,
+.ej2-new #description,
+.ej2-new .sb-footer, .ej2-new #left-sidebar, .sb-component-name {
+    display: none
+}
+
+.ej2-new .sb-right-pane.e-view {
+    margin-left: 0px !important;
+}
+
+.sb-action-description.sb-rightpane-padding {
+    padding-bottom: 0;
+}
+
+.description-section {
+    padding-top: 0;
+}
+
+#sb-content-header {
+    display: none
+}
+
+#content-tab.sb-content-tab {
+    height: 100% !important;
+}
+
+.ej2-new .container-fluid,
+.ej2-new .container-fluid .control-section,
+#sidebar-section, description-section sb-rightpane-padding {
+    padding: 0;
+}
+
+.sb-component-name.sb-rightpane-padding {
+    margin-top: -56px;
+}
+
+.sb-right-pane.e-view {
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    top: 0;
+    overflow-y: hidden;
+}
+
+.sb-desktop-wrapper {
+    height: 100%;
+}
+
+.sb-component-name h1 {
+    padding-top: 0;
+}
+
+.ej2-new .sb-content.e-view {
+    top: 0;
+}
+
+#wrapper {
+    height: 100vh;
+}
+/* end of newTab support */
+/* custom code end */
+/* end of sidebar styles */ '
+.ulstyle {
+    margin: 0px;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.list {
+    float: left;
+    line-height: 20px;
+    margin: 10px;
+    min-width: 220px;
+}

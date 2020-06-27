@@ -1,0 +1,37 @@
+﻿@page "/Catalogs"
+
+@inherits CatalogsBase
+
+@if (CatalogList == null)
+{
+    <Spinner />
+}
+else
+{
+    <div class="main_content">
+        @foreach (var catalog in CatalogList)
+        {
+            <div class="catDiv" @onclick="() => OnCatalogSelect(catalog)">
+                @catalog.Name | @catalog.Movies?.Count() | @catalog.PrivacyLevel
+            </div>
+        }
+
+
+        <!-- Moviewrapper Section -->
+
+        @if (CatalogMovies != null)
+        {
+            <MovieWrapperComponent movies=@CatalogMovies />
+        }
+    </div>
+    <!-- form to create new catalog  -->
+    <h3> Add a new catagory </h3>
+    <form class="form-inline">
+        <div class="form-group">
+            <label c for="newCatName">Name: </label>
+            <input class="form-control" type="text" @bind="NewCategoryName" id="newCatName" name="newCatName">
+        </div>
+        <button type="submit" class="btn btn-primary" @onclick="CreateNewCatalog">Create</button>
+    </form>
+
+}

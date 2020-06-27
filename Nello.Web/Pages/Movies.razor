@@ -1,0 +1,27 @@
+﻿@page "/Movies"
+@inherits MoviesBase
+
+<div>
+    <input class="searchbar search_text_input" @bind="SearchTerm" />
+    <button class="btn btn-primary" @onclick="Search" type="button">Search</button>
+
+    @if (MovieList == null)
+    {
+        <Spinner />
+    }
+    else if (MovieList.Count == 0)
+    {
+        <h3>No movies found...</h3>
+    }
+    else
+    {
+        <FeaturedLists />
+        <MovieWrapperComponent movies=@MovieList />
+        <div class="container-fluid text-center">
+            <h3>Offset: @PageNo</h3>
+            <button class=@PrevCss @onclick="Prev">Prev</button>
+            <button class=@NextCss @onclick="Next">Next</button>
+
+        </div>
+    }
+</div>

@@ -1,0 +1,17 @@
+@inherits MovieWrapperComponentBase
+
+@inject IHttpClientFactory _ClientFactory
+
+@if (Movies != null)
+{
+    <div class="movies_wrapper">
+        @foreach (var movie in Movies)
+        {
+            <div id="@(movie.MovieData.ImdbId)_wrapper">
+                <Movie movie=@movie usersCatalogs="@UserCatalogs" OnMovieClicked="HandleMovieClicked"/>
+            </div>
+        }
+    </div>
+
+    <MovieModal SelectedMovie=@SelectedMovie OnMovieUpdated="HandleMovieUpdatedFromModal" />
+}

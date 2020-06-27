@@ -1,0 +1,48 @@
+﻿@inherits MovieModalBase
+
+@using Syncfusion.Blazor.Buttons
+
+@if (SelectedMovie != null)
+{
+    <div class="modal-overlay" @onclick="Hide"></div>
+    <div id="movieDetails">
+        <img id="movieDetailsImage" src="@SelectedMovie.MovieData.Img" alt="@SelectedMovie.MovieData.Title.Replace("&#39;", "'")" />
+        <div id="movieDetailsWindow">
+            <h1>@(SelectedMovie.MovieData.Title.Replace("&#39;", "'"))</h1>
+            <SfChipList>
+                <ChipCollection>
+                    <ChipListChip Text="Netflix" CssClass="e-primary" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Comedy" CssClass="e-info" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Gross" CssClass="e-success" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Long" CssClass="e-warning" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Family" CssClass="e-danger" Enabled="true"></ChipListChip>
+                </ChipCollection>
+            </SfChipList>
+            <div class="close" id="movieDetailsClose" @onclick="Hide"><i class="fas fa-times"></i></div>
+            <div class="movieInfoBar">
+                <div class="rating"><i class="fab fa-imdb text-warning"></i> @SelectedMovie.MovieData.Rating</div>
+                <div class="runtime"><i class="far fa-clock "></i> @(SelectedMovie.MovieData.RunTime / 60) mins </div>
+                <div>
+                    @if (SelectedMovie.UserMoviedata != null && SelectedMovie.UserMoviedata.Seen)
+                    {<i class='far fa-eye text-success seen'></i>}
+                    else
+                    {<i class='far fa-eye-slash text-danger seen'></i>}
+                </div>
+            </div>
+            <div id="movieDetailsSynopsis">@SelectedMovie.MovieData.Synopsis.Replace("&#39;", "'")</div>
+            <div>
+                <SfButton CssClass="e-warning"><i class="fas fa-folder" /> Add to catagory </SfButton>
+                @if (SelectedMovie.UserMoviedata != null && SelectedMovie.UserMoviedata.Seen)
+                {
+                    <SfButton CssClass="e-danger" @onclick="ToggleSeen">Mark as unseen</SfButton>
+                }
+                else
+                {
+                    <SfButton CssClass="e-success" @onclick="ToggleSeen"><i class="far fa-eye" />Seen it!</SfButton>
+                }
+
+                <SfButton CssClass="e-danger"><i class="fas fa-thumbs-down"></i> Not interested</SfButton>
+            </div>
+        </div>
+    </div>
+}

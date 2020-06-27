@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nello [Data]\Nello_Data.csproj" />
+    <ProjectReference Include="..\Nello.Data\Nello_Data.csproj" />
+    <ProjectReference Include="..\Nello.Domain\Nello.Domain.csproj" />
+    <ProjectReference Include="..\Nello[Data]\Nello[Data].csproj" />
+  </ItemGroup>
+
+</Project>

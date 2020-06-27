@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nello.Api", "Nello.API\Nello.Api.csproj", "{D911EE6D-8AE6-4487-B735-FBE32DE5576A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nello.Application", "Nello.Application\Nello.Application.csproj", "{AD3A3BE7-1345-4581-9594-F178B0DD0FE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nello_DBUtils", "Nello.DBUtils\Nello_DBUtils.csproj", "{01751086-78AC-4C4F-BD43-A3D9AC5EFFA1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nello.Domain", "Nello.Domain\Nello.Domain.csproj", "{AD937587-2E20-46E6-AA33-CE2F343CD25E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nello.Tests", "Nello.Tests\Nello.Tests.csproj", "{5C139A13-DCDB-480C-BD59-EAD0FA59A9F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nello.Web", "Nello.Web\Nello.Web.csproj", "{E644A23C-AF37-4686-879C-E955A35A347E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nello.Data", "Nello.Data\Nello.Data.csproj", "{545A808C-9ACA-4690-A393-7F30B54AC0CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D911EE6D-8AE6-4487-B735-FBE32DE5576A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D911EE6D-8AE6-4487-B735-FBE32DE5576A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D911EE6D-8AE6-4487-B735-FBE32DE5576A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D911EE6D-8AE6-4487-B735-FBE32DE5576A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD3A3BE7-1345-4581-9594-F178B0DD0FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3A3BE7-1345-4581-9594-F178B0DD0FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3A3BE7-1345-4581-9594-F178B0DD0FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3A3BE7-1345-4581-9594-F178B0DD0FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01751086-78AC-4C4F-BD43-A3D9AC5EFFA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01751086-78AC-4C4F-BD43-A3D9AC5EFFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01751086-78AC-4C4F-BD43-A3D9AC5EFFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01751086-78AC-4C4F-BD43-A3D9AC5EFFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD937587-2E20-46E6-AA33-CE2F343CD25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD937587-2E20-46E6-AA33-CE2F343CD25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD937587-2E20-46E6-AA33-CE2F343CD25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD937587-2E20-46E6-AA33-CE2F343CD25E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C139A13-DCDB-480C-BD59-EAD0FA59A9F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C139A13-DCDB-480C-BD59-EAD0FA59A9F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C139A13-DCDB-480C-BD59-EAD0FA59A9F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C139A13-DCDB-480C-BD59-EAD0FA59A9F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E644A23C-AF37-4686-879C-E955A35A347E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E644A23C-AF37-4686-879C-E955A35A347E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E644A23C-AF37-4686-879C-E955A35A347E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E644A23C-AF37-4686-879C-E955A35A347E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545A808C-9ACA-4690-A393-7F30B54AC0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545A808C-9ACA-4690-A393-7F30B54AC0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545A808C-9ACA-4690-A393-7F30B54AC0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545A808C-9ACA-4690-A393-7F30B54AC0CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79615CA7-448D-4FE6-B7E8-DFFC8677926B}
+	EndGlobalSection
+EndGlobal
