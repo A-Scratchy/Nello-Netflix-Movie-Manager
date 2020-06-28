@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Nello.Data.Models.Enums
+namespace Nello.Data.Enums
 {
     public enum PrivacyLevels
     {

@@ -1,5 +1,5 @@
 using MongoDB.Bson.Serialization.Attributes;
-using Nello.Data.Models.Enums;
+using Nello.Data.Enums;
 using System.Collections.Generic;
 
 namespace Nello.Data.Models.DBModels

@@ -196,7 +196,18 @@ namespace Nello.Application
             requestString += "&genres=[";
             if(genres != null)
             {
-                genres.Select(g => requestString += g);
+                foreach (var genre in genres)
+                {
+                    requestString += "\"";
+                    requestString += genre;
+                    if (genre != genres.Last())
+                    {
+                        requestString += "\",";
+                    } else
+                    {
+                        requestString += "\"";
+                    }
+                }
             }
             requestString += "]";
             requestString += $"&keyword={searchTerm}";

@@ -1,27 +1,63 @@
 ﻿@page "/Movies"
 @inherits MoviesBase
+@using Syncfusion.Blazor.Buttons
 
-<div>
-    <input class="searchbar search_text_input" @bind="SearchTerm" />
-    <button class="btn btn-primary" @onclick="Search" type="button">Search</button>
 
-    @if (MovieList == null)
-    {
-        <Spinner />
-    }
-    else if (MovieList.Count == 0)
-    {
-        <h3>No movies found...</h3>
-    }
-    else
-    {
-        <FeaturedLists />
-        <MovieWrapperComponent movies=@MovieList />
-        <div class="container-fluid text-center">
-            <h3>Offset: @PageNo</h3>
-            <button class=@PrevCss @onclick="Prev">Prev</button>
-            <button class=@NextCss @onclick="Next">Next</button>
-
+    <div>
+        <input class="searchbar search_text_input" @bind="SearchTerm" />
+        <button class="btn btn-primary" @onclick="Search" type="button">Search</button>
+        <div class="filters">
+            <SfChipList Selection="Selection.Multiple" cssClass="e-outline">
+                <ChipListEvents OnClick="GenreFilterClicked"></ChipListEvents>
+                <ChipCollection>
+                    <ChipListChip Text="Action" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Adventure" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Animation" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Biography" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Comedy" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Crime" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Documentary" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Drama" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Family" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Fantasy" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Film-Noir" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="History" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Horror" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Music" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Musical" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="News" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Reality-TV" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Romance" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Sci-Fi" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Short" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Sport" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Thriller" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="War" Enabled="true"></ChipListChip>
+                    <ChipListChip Text="Western" Enabled="true"></ChipListChip>
+                </ChipCollection>
+            </SfChipList>
         </div>
-    }
-</div>
+        @if (MovieList == null)
+        {
+            <Spinner />
+        }
+        else if (MovieList.Count == 0)
+        {
+            <h3>No movies found...</h3>
+        }
+        else
+        {
+            <FeaturedLists />
+            <MovieWrapperComponent movies=@MovieList />
+            <div class="container-fluid text-center">
+                <h3>Offset: @PageNo</h3>
+                <button class=@PrevCss @onclick="Prev">Prev</button>
+                <button class=@NextCss @onclick="Next">Next</button>
+
+            </div>
+        }
+    </div>
+
+@code {
+   
+}

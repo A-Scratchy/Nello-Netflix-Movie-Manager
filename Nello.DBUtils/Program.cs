@@ -1,4 +1,6 @@
 using System;
+using Nello.Data.Domain;
+using Nello.Data.Enums;
 using Nello.Data.Models.Domain;
 using Nello.Data.Repos;
 using Nello.Domain.Services;
@@ -49,7 +51,7 @@ namespace Nello_Console
                         break;
                     case "5":
                         var Genrefilter = new FilterModel();
-                        Genrefilter.Genres.Add(Nello.Data.Models.Enums.Genres.Comedy);
+                        Genrefilter.Genres.Add(Genres.Comedy);
                         foreach (var movieview in _DomainService.CreateMovieViews(1, Genrefilter, 30, 0))
                         {
                             Console.WriteLine(movieview.MovieData.ImdbId + " " + movieview.MovieData.Title + " : rating " + movieview.MovieData.Rating + " :  has data? " + movieview.UserHasData);
@@ -57,7 +59,7 @@ namespace Nello_Console
                         break;
                     case "6":
                         var Documentaryfilter = new FilterModel();
-                        Documentaryfilter.Genres.Add(Nello.Data.Models.Enums.Genres.Documentary);
+                        Documentaryfilter.Genres.Add(Genres.Documentary);
                         foreach (var movieview in _DomainService.CreateMovieViews(1, Documentaryfilter, 30, 0))
                         {
                             var genrestring = " | ";

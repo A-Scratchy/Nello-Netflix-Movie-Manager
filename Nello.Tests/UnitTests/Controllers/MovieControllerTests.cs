@@ -8,7 +8,8 @@ using Nello.Data.Models.Domain;
 using System.Collections.Generic;
 using System.Linq;
 using Nello.Data.Models.DBModels;
-using Nello.Data.Models.Enums;
+using Nello.Data.Enums;
+using Nello.Data.Domain;
 #endregion
 
 namespace Nello.Tests.Controllers

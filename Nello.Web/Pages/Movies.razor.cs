@@ -3,6 +3,8 @@ using Nello.Application;
 using Nello.Data.Models.Domain;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Nello.Data.Enums;
+using Syncfusion.Blazor.Buttons;
 
 namespace Nello.Web.Pages
 {
@@ -20,6 +22,12 @@ namespace Nello.Web.Pages
         protected int resultLimit = 18;
 
         protected int PageNo = 0;
+
+        protected List<string> filteredGenres = new List<string>();
+
+        protected int maxRuntime = 50000;
+
+        protected int minRating = 0;
 
         #region <---------- Lifecycle ---------->
 
@@ -39,7 +47,7 @@ namespace Nello.Web.Pages
             {
                 PageNo = 0;
                 ShowSpinner();
-                MovieList = await _ApplicationService.GetAndUpdateMovieList(UserId, resultLimit, SearchTerm);
+                MovieList = await _ApplicationService.GetAndUpdateMovieList(UserId, resultLimit, SearchTerm, 0, maxRuntime, minRating, filteredGenres);
                 if (MovieList.Count < resultLimit)
                 {
                     NextCss = "d-none";
@@ -54,7 +62,7 @@ namespace Nello.Web.Pages
         {
             PageNo++;
             ShowSpinner();
-            var movies = await _ApplicationService.GetAndUpdateMovieList(UserId, resultLimit, SearchTerm, PageNo * resultLimit);
+            var movies = await _ApplicationService.GetAndUpdateMovieList(UserId, resultLimit, SearchTerm, PageNo * resultLimit, maxRuntime, minRating, filteredGenres);
             if (movies.Count > 0)
             {
                 MovieList = movies;
@@ -73,7 +81,7 @@ namespace Nello.Web.Pages
         {
             PageNo--;
             ShowSpinner();
-            MovieList = await _ApplicationService.GetAndUpdateMovieList(UserId, resultLimit, SearchTerm, PageNo * resultLimit);
+            MovieList = await _ApplicationService.GetAndUpdateMovieList(UserId, resultLimit, SearchTerm, PageNo * resultLimit, maxRuntime, minRating, filteredGenres);
 
             if (PageNo == 0)
             {
@@ -83,7 +91,20 @@ namespace Nello.Web.Pages
             StateHasChanged();
         }
 
+        protected void GenreFilterClicked(ClickEventArgs args)
+        {
+            if (filteredGenres.Contains(args.Text))
+            {
+                filteredGenres.Remove(args.Text);
+            }
+            else
+            {
+                filteredGenres.Add(args.Text);
+            }
+        }
+
         #endregion
+
         #region <---------- Helpers ---------->
 
 
@@ -95,4 +116,5 @@ namespace Nello.Web.Pages
 
         #endregion
     }
+
 }

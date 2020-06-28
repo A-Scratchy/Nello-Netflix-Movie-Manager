@@ -1,7 +1,8 @@
 using Nello.Data.Models.DBModels;
 using Nello.Data.Models.Domain;
-using Nello.Data.Models.Enums;
+using Nello.Data.Enums;
 using System.Collections.Generic;
+using Nello.Data.Domain;
 
 namespace Nello.Data.Interfaces
 {

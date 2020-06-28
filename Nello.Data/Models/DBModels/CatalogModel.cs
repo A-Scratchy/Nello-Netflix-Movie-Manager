@@ -1,5 +1,5 @@
 using MongoDB.Bson.Serialization.Attributes;
-using Nello.Data.Models.Enums;
+using Nello.Data.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;

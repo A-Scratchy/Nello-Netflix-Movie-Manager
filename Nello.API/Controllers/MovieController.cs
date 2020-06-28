@@ -1,7 +1,7 @@
 #region <---------- Using statements ---------->
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-
+using Nello.Data.Domain;
 using Nello.Data.Interfaces;
 using Nello.Data.Models.DBModels;
 using Nello.Data.Models.Domain;

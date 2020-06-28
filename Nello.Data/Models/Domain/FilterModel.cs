@@ -1,9 +1,10 @@
-using Nello.Data.Models.Enums;
+using Nello.Data.Enums;
+using Nello.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nello.Data.Models.Domain
+namespace Nello.Data.Domain
 {
     public class FilterModel
     {

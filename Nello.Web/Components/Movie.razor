@@ -26,11 +26,10 @@
         </div>
         <SfChipList>
             <ChipCollection>
-                <ChipListChip CssClass="e-warning" Text="@Movie.MovieData.Rating.ToString()"></ChipListChip>
-                <ChipListChip CssClass="e-primary" Text=@((Movie.MovieData.RunTime / 60) + " mins")></ChipListChip>
+                <ChipListChip CssClass="e-warning-outline" Text="@Movie.MovieData.Rating.ToString()"></ChipListChip>
+                <ChipListChip CssClass="e-primary-outline" Text=@((Movie.MovieData.RunTime / 60) + " mins")></ChipListChip>
             </ChipCollection>
         </SfChipList>
-        f Gen
         <div class="statusBar">
 
             <button class="btn btn-outline-dark seen" @onclick="ToggleSeen">

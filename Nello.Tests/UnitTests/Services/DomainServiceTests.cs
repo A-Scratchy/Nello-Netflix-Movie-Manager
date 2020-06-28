@@ -8,7 +8,8 @@ using System.Collections.Generic;
 using Nello.Data.Models.DBModels;
 using System.Linq;
 using MongoDB.Driver;
-using Nello.Data.Models.Enums;
+using Nello.Data.Enums;
+using Nello.Data.Domain;
 #endregion
 namespace Nello.Tests.Services
 {

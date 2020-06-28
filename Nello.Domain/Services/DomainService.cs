@@ -3,14 +3,15 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using Nello.Data.Models.DBModels;
 using Nello.Data.Interfaces;
-using Nello.Data.Models.Domain;
+using Nello.Data.Domain;
 
 using System.Collections.Generic;
 using System.Linq;
 using System;
-using Nello.Data.Models.Enums;
+using Nello.Data.Enums;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using Nello.Data.Models.Domain;
 #endregion
 
 namespace Nello.Domain.Services
